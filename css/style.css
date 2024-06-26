@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --BLUE: hsl(246, 80%, 60%);
+
+  --LIGHTRED: hsl(15, 100%, 70%); /* WORK */
+  --SOFTBLUE: hsl(195, 74%, 62%); /* PLAY */
+  --LIGHTRED: hsl(348, 100%, 68%); /* STUDY */
+  --LIMEGREEN: hsl(145, 58%, 55%); /* EXERCISE */
+  --VIOLET: hsl(264, 64%, 52%); /* SOCIAL */
+  --SOFTORANGE: hsl(43, 84%, 65%); /* SELFCARE */
+
+  --VERYDARKBLUE: hsl(226, 43%, 10%);
+  --DARKBLUE: hsl(235, 46%, 20%);
+  --DESATURATEDBLUE: hsl(235, 45%, 61%);
+  --PALEBLUE: hsl(236, 100%, 87%);
+}
+
+body {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-width: 18rem;
+}
+
+.card {
+  border: 2px solid black;
+  position: relative;
+  z-index: 0;
+}
+
+.color__div {
+  height: 50px;
+}
+
+.color__div img {
+  position: absolute;
+  right: 0;
+}
