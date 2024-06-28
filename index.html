@@ -14,115 +14,127 @@
 
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <script src="main.js" defer></script>
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
     <main>
       <article class="profile__card">
         <div class="user__box">
           <img src="images/image-jeremy.png" alt="image-jeremy" />
-          <p>Report for</p>
-          <h2 class="name">JeremyRobson</h2>
+          <div class="name">
+            <p>Report for</p>
+            <h2>Jeremy Robson</h2>
+          </div>
         </div>
         <div class="time__box">
-          <button class="btn daily__btn">Daily</button>
-          <button class="btn weekly__btn">Weekly</button>
-          <button class="btn monthly__btn">Monthly</button>
+          <button class="btn" data-option="daily">Daily</button>
+          <button class="btn" data-option="weekly">Weekly</button>
+          <button class="btn" data-option="monthly">Monthly</button>
         </div>
       </article>
 
       <article class="card work__card">
-        <div class="color__div color__work">
+        <div class="color__div color__work work">
           <img src="images/icon-work.svg" alt="icon-work" />
         </div>
-        <div class="task__box">
-          <p>Work</p>
-          <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
-        </div>
-        <div class="data__box">
-          <p class="hours">32hrs</p>
-          <p class="last__week">Last Week - 36hrs</p>
+        <div class="data">
+          <div class="task__box">
+            <p>Work</p>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+          </div>
+          <div class="hours__box">
+            <p class="hours">32hrs</p>
+            <p class="last__week">Last Week - 36hrs</p>
+          </div>
         </div>
       </article>
 
       <article class="card play__card">
-        <div class="color__div color__play">
+        <div class="color__div color__play play">
           <img src="images/icon-play.svg" alt="icon-play" />
         </div>
-        <div class="task__box">
-          <p>Play</p>
-          <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
-        </div>
-        <div class="data__box">
-          <p class="hours">10hrs</p>
-          <p class="last__week">Last Week - 8hrs</p>
+        <div class="data">
+          <div class="task__box">
+            <p>Play</p>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+          </div>
+          <div class="hours__box">
+            <p class="hours">10hrs</p>
+            <p class="last__week">Last Week - 8hrs</p>
+          </div>
         </div>
       </article>
 
       <article class="card study__card">
-        <div class="color__div color__study">
+        <div class="color__div color__study study">
           <img src="images/icon-study.svg" alt="icon-study" />
         </div>
-        <div class="task__box">
-          <p>Study</p>
-          <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
-        </div>
-        <div class="data__box">
-          <p class="hours">4hrs</p>
-          <p class="last__week">Last Week - 7hrs</p>
+        <div class="data">
+          <div class="task__box">
+            <p>Study</p>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+          </div>
+          <div class="hours__box">
+            <p class="hours">4hrs</p>
+            <p class="last__week">Last Week - 7hrs</p>
+          </div>
         </div>
       </article>
 
       <article class="card exercise__card">
-        <div class="color__div color__exercise">
+        <div class="color__div color__exercise exercise">
           <img src="images/icon-exercise.svg" alt="icon-exercice" />
         </div>
-        <div class="task__box">
-          <p>Exercise</p>
-          <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
-        </div>
-        <div class="data__box">
-          <p class="hours">4hrs</p>
-          <p class="last__week">Last Week - 5hrs</p>
+        <div class="data">
+          <div class="task__box">
+            <p>Exercise</p>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+          </div>
+          <div class="hours__box">
+            <p class="hours">4hrs</p>
+            <p class="last__week">Last Week - 5hrs</p>
+          </div>
         </div>
       </article>
 
       <article class="card social__card">
-        <div class="color__div color__social">
+        <div class="color__div color__social social">
           <img src="images/icon-social.svg" alt="icon-social" />
         </div>
-        <div class="task__box">
-          <p>Social</p>
-          <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
-        </div>
-        <div class="data__box">
-          <p class="hours">5hrs</p>
-          <p class="last__week">Last Week - 10hrs</p>
+        <div class="data">
+          <div class="task__box">
+            <p>Social</p>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+          </div>
+          <div class="hours__box">
+            <p class="hours">5hrs</p>
+            <p class="last__week">Last Week - 10hrs</p>
+          </div>
         </div>
       </article>
 
-      <article class="card selfcare__card">
-        <div class="color__div color__selfcare">
+      <article class="card selfcare__card self-care">
+        <div class="color__div color__selfcare selfcare">
           <img src="images/icon-self-care.svg" alt="icon-selfcare" />
         </div>
-        <div class="task__box">
-          <p>Self Care</p>
-          <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
-        </div>
-        <div class="data__box">
-          <p class="hours">2hrs</p>
-          <p class="last__week">Last Week - 2hrs</p>
+        <div class="data">
+          <div class="task__box">
+            <p>Self Care</p>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+          </div>
+          <div class="hours__box">
+            <p class="hours">2hrs</p>
+            <p class="last__week">Last Week - 2hrs</p>
+          </div>
         </div>
       </article>
     </main>

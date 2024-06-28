@@ -7,7 +7,7 @@
 :root {
   --BLUE: hsl(246, 80%, 60%);
 
-  --LIGHTRED: hsl(15, 100%, 70%); /* WORK */
+  --LIGHTORANGE: hsl(15, 100%, 70%); /* WORK */
   --SOFTBLUE: hsl(195, 74%, 62%); /* PLAY */
   --LIGHTRED: hsl(348, 100%, 68%); /* STUDY */
   --LIMEGREEN: hsl(145, 58%, 55%); /* EXERCISE */
@@ -21,30 +21,225 @@
 }
 
 body {
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--VERYDARKBLUE);
+  display: grid;
+  place-items: center;
+  padding: 8rem 2.5rem;
+  font-family: 'Rubik', sans-serif;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  min-width: 18rem;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 2rem;
 }
 
+/* PROFILE CARD */
+
+.profile__card {
+  background-color: var(--DARKBLUE);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.user__box {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  background-color: var(--BLUE);
+  border-radius: 15px;
+}
+
+.user__box img {
+  width: 70px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.user__box .name {
+  display: flex;
+  flex-flow: column;
+}
+
+.user__box .name p {
+  color: var(--PALEBLUE);
+}
+
+.user__box .name h2 {
+  color: #fff;
+  font-weight: 300;
+}
+
+.time__box {
+  padding: 1.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.time__box .btn {
+  width: max-content;
+  color: var(--DESATURATEDBLUE);
+  background-color: var(--DARKBLUE);
+  border: none;
+  cursor: pointer;
+  transition: color 250ms;
+  font-size: 1rem;
+}
+
+.time__box .btn:hover,
+.time__box .btn:active {
+  color: #fff;
+}
+
+/* CARDS */
+
 .card {
-  border: 2px solid black;
-  position: relative;
-  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 2rem 1fr;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.work__card,
+.work {
+  background-color: var(--LIGHTORANGE);
+}
+.play__card,
+.play {
+  background-color: var(--SOFTBLUE);
+}
+.study__card,
+.study {
+  background-color: var(--LIGHTRED);
+}
+.exercise__card,
+.exercise {
+  background-color: var(--LIMEGREEN);
+}
+.social__card,
+.social {
+  background-color: var(--VIOLET);
+}
+.selfcare__card,
+.self-care {
+  background-color: var(--SOFTORANGE);
 }
 
 .color__div {
-  height: 50px;
+  display: grid;
+  place-items: start end;
+  grid-row: 1/3;
+  grid-column: 1/2;
 }
 
 .color__div img {
-  position: absolute;
-  right: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.data {
+  border-radius: 15px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background-color: var(--DARKBLUE);
+  padding: 2rem 1rem;
+  cursor: pointer;
+}
+
+.card:hover > .data {
+  background-color: var(--DESATURATEDBLUE);
+}
+
+.task__box,
+.hours__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task__box p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.hours__box {
+  font-weight: 300;
+}
+
+.hours__box .hours {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.hours__box .last__week {
+  color: var(--PALEBLUE);
+}
+
+@media (min-width: 500px) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    min-height: 50px;
+    gap: 2rem;
+  }
+
+  .profile__card {
+    grid-row: 1/3;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .user__box {
+    flex-flow: column;
+    align-items: start;
+    padding: 2rem 1.5rem 5rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .data {
+    gap: 1.5rem;
+  }
+
+  .time__box {
+    flex-flow: column;
+    gap: 1rem;
+  }
+
+  .hours__box {
+    flex-flow: column nowrap;
+    align-items: start;
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .user__box {
+    padding: 2rem 1.5rem 7rem 1.5rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  main {
+    max-width: 1100px;
+  }
 }
